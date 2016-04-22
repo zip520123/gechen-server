@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<!-- <iframe width="560" height="315" src="http://www.youtube.com/embed/JWSRqWpWPzE?autoplay=1&loop=1&playlist=JWSRqWpWPzE" frameborder="0" allowfullscreen></iframe>​ -->
+<!-- <iframe width="560" height="315" src="http://www.youtube.com/embed/G3C-VevI36s?autoplay=1&loop=1&playlist=G3C-VevI36s" frameborder="0" allowfullscreen></iframe>​ -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uiTbyKrKsYM?list=PLYw6aCNRn6JjDYqMdX3ITD9-AzEDOIqEV&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+<!-- http://www.youtube.com/v/uiTbyKrKsYM?version=3&loop=1&playlist=uiTbyKrKsYM -->

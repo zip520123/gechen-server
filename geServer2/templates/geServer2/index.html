@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<title>J🐱avaScript </title>
+<!-- <script src="run52.js" type="text/javascript"></script> -->
+</head>
+
+<body>
+<!-- <input id="b" type="button" value="RUN" onclick="run();"> -->
+<div id="content"></div>
+
+</body>
+
+</html>
+<script>
+var c = document.getElementById("content");
+   var n1 = document.createElement("p");
+   var n2 = document.createElement("p");
+   var n3 = document.createElement("p");
+   var n4 = document.createElement("p");
+   var n5 = document.createElement("p");
+   var n6 = document.createElement("p");
+   var o1 = document.createElement("p");
+   var o2 = document.createElement("p");
+   var o3 = document.createElement("p");
+   var o4 = document.createElement("p");
+   var o5 = document.createElement("p");
+   var o6 = document.createElement("p");
+
+   var t1 = escape("hello");
+   var t2 = escape("h e l l o");
+   var t3 = escape(" h e l l o ");
+   var t4 = escape("Hello, world!");
+   var t5 = escape("安安你好");
+   var t6 = escape("🐱");
+
+   n1.appendChild(document.createTextNode(t1));
+   c.appendChild(n1);
+   n2.appendChild(document.createTextNode(t2));
+   c.appendChild(n2);
+   n3.appendChild(document.createTextNode(t3));
+   c.appendChild(n3);
+   n4.appendChild(document.createTextNode(t4));
+   c.appendChild(n4);
+   n5.appendChild(document.createTextNode(t5));
+   c.appendChild(n5);
+   n6.appendChild(document.createTextNode(t6));
+   c.appendChild(n6);
+
+   var s1 = unescape(t1);
+   var s2 = unescape(t2);
+   var s3 = unescape(t3);
+   var s4 = unescape(t4);
+   var s5 = unescape(t5);
+   var s6 = unescape(t6);
+
+   o1.appendChild(document.createTextNode(s1));
+   c.appendChild(o1);
+   o2.appendChild(document.createTextNode(s2));
+   c.appendChild(o2);
+   o3.appendChild(document.createTextNode(s3));
+   c.appendChild(o3);
+   o4.appendChild(document.createTextNode(s4));
+   c.appendChild(o4);
+   o5.appendChild(document.createTextNode(s5));
+   c.appendChild(o5);
+   o6.appendChild(document.createTextNode(s6));
+   c.appendChild(o6);
+
+</script>
