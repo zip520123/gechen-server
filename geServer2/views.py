@@ -5,6 +5,7 @@ from django.template import loader
 from forms import ContactForm , UploadFileForm
 from models import ModelFormWithFileField
 from fileHandler import handle_uploaded_file
+from os import remove
 def upload_file(request):
     documents = ModelFormWithFileField.objects.all()
     if request.method == 'POST':
@@ -15,9 +16,6 @@ def upload_file(request):
             # form.save()
             # template = loader.get_template('geServer2/list.html')
             # return HttpResponse(template.render(request))
-
-            return render(request,'geServer2/list.html', {'form': form ,'documents': documents})
-
     else:
         form = UploadFileForm()
     # Load documents for the list page
@@ -29,6 +27,15 @@ def index(request):
     template = loader.get_template('geServer2/index.html')
 
     return HttpResponse(template.render(request))
+def delete(request):
+
+    # ModelFormWithFileField.objects.all().delete()
+    corfile = ModelFormWithFileField.objects.get(id=request.GET['fileID'])
+    # remove(str(corfile.filename))
+    corfile.delete()
+
+    template = loader.get_template('geServer2/index.html')
+    return HttpResponse('delete ' + corfile.upload.name)
 class IndexFromView(FormView):
     template_name = 'geServer2/index.html'
 

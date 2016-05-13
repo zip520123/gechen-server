@@ -6,7 +6,8 @@ from . import views
 
 urlpatterns = [
     # url(r'^file/', views.ContactView.as_view(), name='index'),
-    url(r'^file/', views.upload_file, name='index'),
+    url(r'^$', views.upload_file, name='index'),
+    url(r'^delete', views.delete, name='delete'),
     # url(r'^$', views.index, name='index'),
     # url(r'^$', ProfileImageIndexView.as_view(), name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
