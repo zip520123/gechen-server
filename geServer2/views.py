@@ -35,7 +35,7 @@ def delete(request):
     corfile.delete()
 
     template = loader.get_template('geServer2/index.html')
-    return HttpResponse('delete ' + corfile.upload.name)
+    return upload_file(request)
 class IndexFromView(FormView):
     template_name = 'geServer2/index.html'
 
